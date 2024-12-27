@@ -62,7 +62,7 @@ class CalendarPage():
     def render_header(self):
         font = ImageFont.truetype("resources/verdana.ttf", 16)
         self.draw.text(
-                (self.time_axis_w + 36, 8), 
+                (self.time_axis_w + 20, 8), 
                 f"Dnes", 
                 fill=0, 
                 font=font
@@ -70,7 +70,7 @@ class CalendarPage():
         today = datetime.datetime.now().strftime('%d. %m.')
         font = ImageFont.truetype("resources/verdana.ttf", 10)
         self.draw.text(
-                (self.time_axis_w + 40, 30), 
+                (self.time_axis_w + 26, 30), 
                 f"{today}", 
                 fill=0, 
                 font=font
@@ -79,7 +79,7 @@ class CalendarPage():
             date = datetime.datetime.now() + datetime.timedelta(days=i)
             font = ImageFont.truetype("resources/verdana.ttf", 16)
             self.draw.text(
-                    (self.time_axis_w + i * self.day_w + 50, 8), 
+                    (self.time_axis_w + i * self.day_w + 32, 8), 
                     f"{DAY_MAPPING[date.weekday()]}", 
                     fill=0, 
                     font=font
@@ -87,7 +87,7 @@ class CalendarPage():
             day = date.strftime('%d. %m.')
             font = ImageFont.truetype("resources/verdana.ttf", 10)
             self.draw.text(
-                    (self.time_axis_w + i * self.day_w + 44, 30), 
+                    (self.time_axis_w + i * self.day_w + 26, 30), 
                     f"{day}", 
                     fill=0, 
                     font=font
